@@ -14,4 +14,4 @@ else:
     y = w//(m+1) +1
 
 
-print(x*y)
+print(x*y) 
