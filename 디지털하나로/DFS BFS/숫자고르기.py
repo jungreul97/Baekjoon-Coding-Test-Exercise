@@ -9,5 +9,17 @@ tmp = []
 for _ in range(n):
     tmp.append(int(input()))
 arr.append(tmp)
-print(arr)
+
+queue = deque()
+visited = [False] * n
+
+for i in range(n):
+    if not visited[i]:
+        queue.append((arr[i],0,i))
+    
+    while queue:
+        x,idx = queue.popleft()
+        if idx == 0:
+            
+
 
