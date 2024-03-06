@@ -25,7 +25,7 @@ while q:
         continue
     for i in graph[now]:
         cost = dist+i[1]
-        if cost<distance[i[0]]:
+        if cost<distance[i[0]]: # 더짧을때만 들어갔네...
             mid_node[i[0]] = now # 노드에서 가장 가까운게 현재 노드이므로 기록
             distance[i[0]] = cost
             heapq.heappush(q,(cost,i[0]))
