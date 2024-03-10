@@ -6,8 +6,8 @@ arr = list(map(int,input().split()))
 cnt = 0
 start,end = 0,1
 while start <= end :
-    print(start,end)
-    print(*arr[start : end ])
+    # print(start,end)
+    # print(*arr[start : end ])
     if sum(arr[start:end]) == M : 
         cnt+=1
         start += 1
