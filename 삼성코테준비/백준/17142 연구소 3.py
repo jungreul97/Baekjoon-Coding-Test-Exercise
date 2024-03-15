@@ -27,7 +27,7 @@ def bfs(case):
     while queue:
         x,y,dist = queue.popleft()
         if visited[x][y] < dist : continue # 갱신되어 있는데 지금의 거리보다 작으면 넘어가기
-        if arr[x][y] == 2 and visited[x][y] != int(1e9) and visited[x][y] != 0 : visited[x][y] -= int(1e9) # 비활성화된 바이러스인데 바이러스가 왔다면 기존 바이러스가 지나가는 거리와 같으니 원래 초기값으로 변경하기@@@@@!!!!!!!!!!!
+        if arr[x][y] == 2 and visited[x][y] != int(1e9) and visited[x][y] != 0 : visited[x][y] -= int(1e9) # 비활성화된 바이러스인데 바이러스가 왔다면 거리정보가 들어가게 되므로 원래 초기값으로 변경하기@@@@@!!!!!!!!!!!
         for i in range(4):
             nx,ny = x+dx[i],y+dy[i]
             if 0<=nx<N and 0<=ny<N and arr[nx][ny] != 1  and dist+1<visited[nx][ny]: # 아직 갱신하지 않았거나 기존 시간보다 작다면
