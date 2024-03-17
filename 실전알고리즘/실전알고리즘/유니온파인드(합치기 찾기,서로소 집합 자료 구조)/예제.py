@@ -2,12 +2,12 @@
 def find_parent(parent, x):
     # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
     if parent[x] != x:
-        return find_parent(parent, parent[x])
+        return find_parent(parent, parent[x]) # 안의 노드를 타고 들어가서 부모노드를 찾음
     return x
 
-# 두 원소가 속한 집합을 합치기
+# 두 원소가 속한 집합을 합치기 => 번호가 더 큰 노드의 부모 노드를 작은 번호로 설정함
 def union_parent(parent, a, b):
-    a = find_parent(parent, a)
+    a = find_parent(parent, a) # 두 노드의 부모노드중에 더 작은 값으로 갱신
     b = find_parent(parent, b)
     if a < b:
         parent[b] = a

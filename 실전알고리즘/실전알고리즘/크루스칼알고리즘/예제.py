@@ -34,13 +34,13 @@ for _ in range(e):
 
 # 간선을 비용순으로 정렬
 edges.sort()
-
+print(edges)
 # 간선을 하나씩 확인하며
 for edge in edges:
     cost, a, b = edge
-    # 사이클이 발생하지 않는 경우에만 집합에 포함
+    # 사이클이 발생하지 않는 경우에만 집합에 포함(같은 집합이 아니면 포함 안함)
     if find_parent(parent, a) != find_parent(parent, b):
         union_parent(parent, a, b)
         result += cost
-
+print(parent)
 print(result)
