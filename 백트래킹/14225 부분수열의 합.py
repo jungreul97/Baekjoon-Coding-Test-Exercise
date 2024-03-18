@@ -24,6 +24,6 @@ for i in range(1,len(arr)):
     if not arr[i] : 
         answer = i
         break
-print(arr)
+# print(arr)
 if answer == 0: print(len(arr))
 else : print(answer)

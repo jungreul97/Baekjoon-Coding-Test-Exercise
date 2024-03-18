@@ -23,7 +23,7 @@ parent = [i for i in range(N+1)]
 
 for _ in range(M):
     a,b = map(int,input().split())
-    union_parent(parent,a,b)
+    union_parent(parent,a,b) # 어차피 연결되어 있으니까 둘중에 최소만 남김
 print(parent)
 print(moneys)
 total = sum(moneys)

@@ -20,6 +20,7 @@ def dfs(start,sin,ssn,cnt):
             visited[i] = True
             dfs(start+1,sin*arr[i][0],ssn+arr[i][1],cnt+1)
             visited[i] = False
+            
 visited = [False]*N
 dfs(0,sin,ssn,0)
 print(answer)
