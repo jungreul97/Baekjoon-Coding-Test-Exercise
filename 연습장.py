@@ -1,15 +1,13 @@
+import sys
+from collections import defaultdict
+input = sys.stdin.readline
+
 n = int(input())
-fac = 1
-for i in range(2,n+1):
-    fac*=i
-str_fac = str(fac)
-answer = 0
-for i in range(-1,-n,-1):
-    if str_fac[i] != '0':
-        break
-    else:
-        answer+=1
-if answer == len(str_fac):
-    print(0)
-else:
-    print(answer)
+words = list(map(str,input().rstrip().split()))
+dict = defaultdict(int)
+for word in words:
+    if word[-6:] == "Cheese":
+        dict[word]+=1
+if len(dict)>=4: print("yummy")
+else: print("sad")
+
