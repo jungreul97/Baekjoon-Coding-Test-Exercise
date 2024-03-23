@@ -1,13 +1,15 @@
-import sys
-from collections import defaultdict
-input = sys.stdin.readline
+def cantor(n):
+    if n == 1:
+        return "-"
+    else:
+        left = cantor(n//3)
+        center = " " * (n //3)
+        return left + center + left
 
-n = int(input())
-words = list(map(str,input().rstrip().split()))
-dict = defaultdict(int)
-for word in words:
-    if word[-6:] == "Cheese":
-        dict[word]+=1
-if len(dict)>=4: print("yummy")
-else: print("sad")
-
+while True:
+    try:
+        N = int(input())
+        result = cantor(3**N)
+        print(result)
+    except:
+        break
