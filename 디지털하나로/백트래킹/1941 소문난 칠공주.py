@@ -5,4 +5,6 @@ arr = []
 for _ in range(5):
     arr.append(input().rstrip())
 
-print(arr)
+dx = [-1,1,0,0]
+dy = [0,0,-1,1]
+

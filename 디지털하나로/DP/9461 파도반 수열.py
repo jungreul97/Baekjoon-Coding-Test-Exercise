@@ -7,8 +7,6 @@ start = 1
 for i in range(6,101):
     dp[i] = dp[start] + dp[i-1]
     start+=1
-print(dp)
-
 
 T = int(input())
 while T>0:
