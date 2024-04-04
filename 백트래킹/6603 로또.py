@@ -19,3 +19,4 @@ while True:
     numbers = []
     dfs(0)
     print()
+g

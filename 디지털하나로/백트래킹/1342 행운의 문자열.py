@@ -10,7 +10,7 @@ chars = []
 def dfs():
     global answer
     if len(chars) == len(s):
-        print(chars)
+        # print(chars)
         answer += 1
     
     for key in dict.keys():

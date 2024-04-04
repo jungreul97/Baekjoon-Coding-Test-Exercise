@@ -7,7 +7,7 @@ arr = list(map(str,input().split()))
 arr.sort()
 chars = []
 moum = ['a','e','i','o','u']
-print(arr)
+
 def dfs(start,mon,jan):
     if len(chars) == L:
         if mon >= 1 and jan >= 2:
